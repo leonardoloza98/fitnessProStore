@@ -1,5 +1,6 @@
 import React from "react";
-import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
+import CartWidget from "../CartWidget/CartWidget";
 import "./Navbar.scss";
 
 const NavbarComponent = () => {
@@ -7,11 +8,12 @@ const NavbarComponent = () => {
     <div>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home" className="tittle">Fitness ProStore</Navbar.Brand>
+          <Navbar.Brand>Fitness ProStore</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#about">Sobre Nosotros</Nav.Link>
-            <Nav.Link href="#products">Productos</Nav.Link>
+            <Nav.Link>Home</Nav.Link>
+            <Nav.Link>Sobre Nosotros</Nav.Link>
+            <Nav.Link>Productos</Nav.Link>
+            <Nav.Link className="d-flex flex-row-reverse"><CartWidget className="p-2"></CartWidget></Nav.Link>
           </Nav>
         </Container>
       </Navbar>
