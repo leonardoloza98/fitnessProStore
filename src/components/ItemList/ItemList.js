@@ -1,9 +1,18 @@
 import React from "react";
-import "./ItemList.scss"
+import "./ItemList.scss";
+import Item from "../Item/Item";
 
-const ItemList = ()=>{
+const ItemList = (props)=>{
+    const {items} = props;
+    const proteina = items[0];
     return(
-        <div></div>
+        <div>
+            {items.map(item=>{
+                return(
+                  <Item itemProps={item}></Item>  
+                )
+            })}
+        </div>
     )
 }
 
